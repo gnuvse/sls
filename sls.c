@@ -14,7 +14,9 @@ int str_len(char str[]) {
 
 
 void remove_string(char source[], int start, int count_remove) {
-	for (int i = start, j = count_remove + start - 1; i < str_len(source); i++, j++)
+	int removal_position = count_remove + start - 1;
+
+	for (int i = start, j = removal_position; i < str_len(source); i++, j++)
 		source[i] = source[j];
 
 	printf("%s\n", source);
