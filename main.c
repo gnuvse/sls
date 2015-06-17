@@ -11,5 +11,8 @@ int main() {
 	scanf("%14s", str);
 
 	remove_string(str, 2, 4);
+
+	printf("%s\n", str);
+
 	return 0;
 }
