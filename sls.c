@@ -2,6 +2,12 @@
 #include "sls.h"
 #define SIZE 15
 
+void sub_string(char source[], int start, int count, char result[]) {
+	for (int i = start, j = 0; i < count + 1 && j < SIZE - 1; i++, j++)
+		result[j] = source[i];
+
+	result[SIZE] = '\0';
+}
 
 
 void remove_string(char source[], int start, int count_remove) {
