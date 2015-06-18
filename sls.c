@@ -21,8 +21,13 @@ int find_string(char source[], char find[]) {
 
 
 void sub_string(char source[], int start, int count, char result[]) {
-	for (int i = start, j = 0; i < count + 1; i++, j++)
+
+	if (count > str_len(source))
+		count = str_len(source);
+
+	for (int i = start, j = 0; i < count; i++, j++)
 		result[j] = source[i];
+
 
 	result[SIZE] = '\0';
 }
